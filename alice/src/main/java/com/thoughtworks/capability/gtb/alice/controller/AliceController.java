@@ -9,7 +9,7 @@ import org.springframework.web.client.RestTemplate;
 public class AliceController {
     @GetMapping(path = "/hello")
     public String hello(){
-        String requestBobUrl = "http://localhost:8081/hello";
+        String requestBobUrl = "http://bob:8081/hello";
         RestTemplate restTemplate = new RestTemplate();
         return restTemplate.getForObject(requestBobUrl, String.class);
     }
